@@ -17,7 +17,7 @@ services:
     environment:
       NODE_ENV: production
     ports:
-      - 3000:3000
+      - 3030:3030
       - 35729:35729
     develop:
       watch:
@@ -29,10 +29,10 @@ services:
 
   todo-database:
     image: mongo:6
-    #volumes: 
-    #  - database:/data/db
+    volumes: 
+      - database:/data/db
     ports:
       - 27017:27017
 
-#volumes:
-  #database:
+volumes:
+  database:
